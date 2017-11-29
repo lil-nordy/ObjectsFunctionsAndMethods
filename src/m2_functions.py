@@ -8,7 +8,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 1. PUT YOUR NAME IN THE ABOVE LINE and...
+# DONE: 1. PUT YOUR NAME IN THE ABOVE LINE and...
 #
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
@@ -33,11 +33,12 @@ def main():
     # A TurtleWindow works "behind the scenes" to enable Turtle movement
     window = rg.TurtleWindow()
 
-    turtle1()
-    turtle3()
-    turtle2()
-    turtle2()
-
+    # turtle1()
+    turtle4()
+    turtle5()
+    # turtle3()
+    # turtle2()
+    # turtle2()
     window.close_on_mouse_click()
 
 
@@ -102,10 +103,37 @@ def turtle3():
     maja.draw_circle(50)
     maja.end_fill()
 
+def turtle4():
+    """
+    creates a single turtle object with a shape and pen color, makes it move around a bit. Nothing fancy according to specification.
+    # Why isn't the color of the turtle changing with each line?
+    """
+    ricardo = rg.SimpleTurtle('classic')
+    ricardo.speed = 10
+
+    ricardo.pen_down()
+
+    ricardo.begin_fill()
+    ricardo.draw_square(200)
+    ricardo.end_fill()
+    print(ricardo.x_cor(), ricardo.y_cor())
+
+def turtle5():
+    """
+    creates two turtle objects with shape and pen color, makes them both move around a bit. Nothing fancy according to sepecification.
+    :return:
+    """
+    richard = rg.SimpleTurtle('arrow')
+    richard.left(45)
+    richard.speed = 10
+    richard.pen = rg.Pen('white' , 5)
+    richard.pen_down()
+    richard.go_to(rg.Point(200, 200))
+    print(richard.x_cor(), richard.y_cor())
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -116,9 +144,10 @@ def turtle3():
 #            (Answer: 1)
 #     -- How many times does   main   call the   turtle2   function?
 #            (Hint: the answer is NOT 1.)
+# >> Twice.
 #     -- What line of code calls the   main   function?
 #            (Answer: look at the LAST line of this module, far below.)
-#
+# >> Line 22* *something. (Depending on how many lines of comments I write first...)
 #     ** ASK QUESTIONS if you are uncertain. **
 #
 #   RELATE what is DRAWN to the CODE above.  Be sure you understand:
@@ -137,7 +166,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -167,7 +196,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
