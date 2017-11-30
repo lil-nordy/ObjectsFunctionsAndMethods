@@ -276,6 +276,6 @@ def try_methods_and_functions():
     methyfun_turtle.draw_circle(200)
     methyfun_turtle.draw_square(50)
 # ----------------------------------------------------------------------
-# Calls  main  to start the ball rolling.
+# Calls  main  to start the ball rolling..
 # ----------------------------------------------------------------------
 main()
