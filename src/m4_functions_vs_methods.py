@@ -84,7 +84,7 @@ def main():
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
     try_methods()
     try_functions()
-
+    try_methods_and_functions()
     window.close_on_mouse_click()
 
 
@@ -246,7 +246,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -256,8 +256,25 @@ def try_methods_and_functions():
     # function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ####################################################################
+    methyfun_turtle = rg.SimpleTurtle()
+    methyfun_turtle.pen = rg.Pen('blue', 5)
+    methyfun_turtle.backward(150)
+    methyfun_turtle.speed = 1
+    draw_many_squares(methyfun_turtle, 2, 100, 30)
 
+    methyfun_turtle.pen = rg.Pen('red', 5)
+    # Question: Why did it make me supply the thickness of the pen?
+    methyfun_turtle.speed = 10
+    draw_many_squares(methyfun_turtle, 5, 50, 15)
 
+    methyfun_turtle.speed = 100
+    methyfun_turtle.pen = rg.Pen('red', 35)
+    draw_many_squares(methyfun_turtle, 8, 300, 60)
+
+    methyfun_turtle.pen = rg.Pen('black', 3)
+    methyfun_turtle.backward(200)
+    methyfun_turtle.draw_circle(200)
+    methyfun_turtle.draw_square(50)
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
