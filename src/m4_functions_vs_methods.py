@@ -9,7 +9,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -76,13 +76,14 @@ def main():
     #   Second number: bigger means slower.
     window.tracer(1, 1)
 
-    jump_and_move_turtle(100, 50, 200, -100)
-    turtle = rg.SimpleTurtle('square')
-    draw_many_squares(turtle, 3, 75, 15)
-    turtle3()
+    # jump_and_move_turtle(100, 50, 200, -100)
+    # turtle = rg.SimpleTurtle('square')
+    # draw_many_squares(turtle, 3, 75, 15)
+    # turtle3()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
-
+    try_methods()
+    try_functions()
 
     window.close_on_mouse_click()
 
@@ -172,11 +173,20 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
+    # >> NOTE: Test isn't quite the right word for it; you're not doing a Unit Test, you are CALLING THE FUNCTION TO
+    # VERIFY THAT IT WORKS. (sic, nate)
     ####################################################################
 
+    method_turtle = rg.SimpleTurtle()
+    method_turtle.pen = rg.Pen('brown', 5)
+
+    method_turtle.forward(150)
+    method_turtle.left(90)
+    method_turtle.forward(50)
+    method_turtle.backward(100)
 
 def try_functions():
     """
@@ -186,7 +196,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -197,6 +207,10 @@ def try_functions():
     # HINT: see   jump_and_move_turtle   above.
     #
     ####################################################################
+
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
 
 def try_methods_and_functions():
