@@ -33,12 +33,12 @@ def main():
     # A TurtleWindow works "behind the scenes" to enable Turtle movement
     window = rg.TurtleWindow()
 
-    # turtle1()
+    turtle1()
     turtle4()
     turtle5()
-    # turtle3()
-    # turtle2()
-    # turtle2()
+    turtle3()
+    turtle2()
+    turtle2()
     window.close_on_mouse_click()
 
 
