@@ -79,7 +79,7 @@ def main():
     example1()
     example2()
     example3()
-    
+
 
 def example1():
     """ Displays an empty window. """
